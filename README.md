@@ -9,5 +9,8 @@ https://forms.gle/Uhizb6qcZf1t9QqH6
 The G-forms links to Google Sheets here:
 https://docs.google.com/spreadsheets/d/1AUqi8XXrwYQov4t8oJj76eChlS2B9IPMBvbpCx5uTPE/edit?usp=sharing 
 
+Join The Discord
+https://discord.gg/vByH973SU 
+
 Full page Screenshot (manual):
 <img width="1404" height="2132" alt="image" src="https://github.com/user-attachments/assets/f1bc6bfd-7e73-4167-aba0-a2330036675a" />
