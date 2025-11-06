@@ -1,4 +1,5 @@
-New Open Source Khan Academy Leaderboard that anyone can help contribute to.
+New Open Source Khan Academy Leaderboard that anyone can help contribute to!
+
 
 View Deployed Site:
 🌐 https://keylightgithub.github.io/Khan_Academy_Leaderboard/
@@ -14,4 +15,4 @@ Join The Discord
 https://discord.gg/vByH973SU 
 
 Full page Screenshot (manual):
-<img width="1404" height="2132" alt="image" src="https://github.com/user-attachments/assets/f1bc6bfd-7e73-4167-aba0-a2330036675a" />
+<img width="2178" height="2095" alt="image" src="https://github.com/user-attachments/assets/ded7d7fd-6ce0-4981-b441-4b501dc5e2b6" />
