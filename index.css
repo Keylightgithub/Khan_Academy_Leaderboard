@@ -140,3 +140,44 @@ h2 {
         font-size: 1.5rem;
     }
 }
+
+/* Styles for sortable tables */
+.wikitable.sortable th {
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+.wikitable.sortable th::before,
+.wikitable.sortable th::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    opacity: 0.3;
+    border: 4px solid transparent;
+}
+
+.wikitable.sortable th::before {
+    bottom: 50%;
+    margin-bottom: -1px;
+    border-bottom-color: var(--heading-color);
+}
+
+.wikitable.sortable th::after {
+    top: 50%;
+    margin-top: -1px;
+    border-top-color: var(--heading-color);
+}
+
+.wikitable.sortable th.th-sort-asc::before,
+.wikitable.sortable th.th-sort-desc::after {
+    opacity: 1;
+}
+
+.wikitable.sortable th.th-sort-desc::before {
+    opacity: 0.3;
+}
+
+.wikitable.sortable th.th-sort-asc::after {
+    opacity: 0.3;
+}
