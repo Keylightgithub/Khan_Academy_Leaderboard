@@ -1,0 +1,142 @@
+:root {
+    --background-color: #f8f9fa;
+    --card-background: #ffffff;
+    --text-color: #212529;
+    --heading-color: #002d5b;
+    --link-color: #1a73e8;
+    --link-hover-color: #0056b3;
+    --border-color: #dee2e6;
+    --table-header-bg: #e9ecef;
+    --table-row-hover-bg: #f1f3f5;
+    --points-color: #005A88;
+    --shadow-color: rgba(0, 0, 0, 0.05);
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1.5rem;
+}
+
+h1 {
+    color: var(--heading-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    color: var(--heading-color);
+    font-size: 1.75rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.rules ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.rules li {
+    margin-bottom: 0.5rem;
+}
+
+.leaderboard {
+    margin-top: 2rem;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.wikitable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.wikitable th,
+.wikitable td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    white-space: nowrap;
+}
+
+.wikitable thead th {
+    background-color: var(--table-header-bg);
+    font-weight: 600;
+    color: var(--heading-color);
+}
+
+.wikitable tbody tr:hover {
+    background-color: var(--table-row-hover-bg);
+}
+
+.wikitable td:first-child,
+.wikitable th:first-child {
+    text-align: center;
+    width: 5%;
+}
+
+.wikitable td:nth-child(2),
+.wikitable th:nth-child(2) {
+    width: 45%;
+}
+
+.wikitable td.points,
+.wikitable th:nth-child(3),
+.wikitable th:nth-child(4) {
+    text-align: right;
+    font-feature-settings: "tnum"; /* Tabular nums for alignment */
+}
+
+.wikitable td a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease-in-out;
+}
+
+.wikitable td a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+.wikitable td.points {
+    font-weight: 600;
+    color: var(--points-color);
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
