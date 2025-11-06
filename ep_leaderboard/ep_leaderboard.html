@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khan Academy Leaderboard Table</title>
+    <link rel="stylesheet" href="ep_leaderboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="leaderboard">
+        <h2>Energy Point Leaderboard</h2>
+        <div class="leaderboard-controls">
+            <button id="refresh-leaderboard" type="button">Refresh</button>
+            <div id="leaderboard-status" role="status" aria-live="polite"></div>
+        </div>
+        <div class="table-wrapper">
+            <table class="wikitable sortable">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th data-sort-type="text">User</th>
+                        <th data-sort-type="text">Energy Points</th>
+                        <th data-sort-type="text">Points Behind</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows are generated from EP_Leaderboard.json by ep_leaderboard.js. -->
+                    <tr class="loading-row">
+                        <td colspan="4">Loading leaderboard…</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script src="ep_leaderboard.js" defer></script>
+</body>
+</html>

@@ -1,4 +1,3 @@
-
 :root {
     --background-color: #f8f9fa;
     --card-background: #ffffff;
@@ -147,12 +146,6 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
-.leaderboard-iframe {
-    width: 100%;
-    height: 900px;
-    border: none;
-}
-
 @media (max-width: 768px) {
     .container {
         margin: 1rem;
@@ -166,4 +159,164 @@ h2 {
     h2 {
         font-size: 1.5rem;
     }
+}
+
+/* Leaderboard Styles */
+.leaderboard {
+    margin-top: 2rem;
+}
+
+.leaderboard-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+#refresh-leaderboard {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--link-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#refresh-leaderboard:hover {
+    background-color: var(--link-hover-color);
+}
+
+#leaderboard-status {
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+#leaderboard-status.status-loading {
+    color: var(--link-color);
+}
+#leaderboard-status.status-success {
+    color: #28a745;
+}
+#leaderboard-status.status-error {
+    color: #dc3545;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+}
+
+.wikitable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.wikitable th,
+.wikitable td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    white-space: nowrap;
+}
+
+.wikitable tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.wikitable thead th {
+    background-color: var(--table-header-bg);
+    font-weight: 600;
+    color: var(--heading-color);
+}
+
+.wikitable tbody tr:hover {
+    background-color: var(--table-row-hover-bg);
+}
+
+.wikitable td:first-child,
+.wikitable th:first-child {
+    text-align: center;
+    width: 5%;
+}
+
+.wikitable td:nth-child(2),
+.wikitable th:nth-child(2) {
+    width: 45%;
+}
+
+.wikitable td.points,
+.wikitable th:nth-child(3),
+.wikitable th:nth-child(4) {
+    text-align: right;
+    font-feature-settings: "tnum"; /* Tabular nums for alignment */
+}
+
+.wikitable td a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease-in-out;
+}
+
+.wikitable td a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+.wikitable td.points {
+    font-weight: 600;
+    color: var(--points-color);
+}
+
+
+/* Styles for sortable tables */
+.wikitable.sortable th {
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    padding-right: 30px;
+}
+
+.wikitable.sortable th::before,
+.wikitable.sortable th::after {
+    content: '';
+    position: absolute;
+    right: 12px;
+    opacity: 0.3;
+    border: 5px solid transparent;
+}
+
+.wikitable.sortable th::before {
+    bottom: 50%;
+    margin-bottom: 2px;
+    border-bottom-color: var(--heading-color);
+}
+
+.wikitable.sortable th::after {
+    top: 50%;
+    margin-top: 2px;
+    border-top-color: var(--heading-color);
+}
+
+.wikitable.sortable th.th-sort-asc::before,
+.wikitable.sortable th.th-sort-desc::after {
+    opacity: 1;
+}
+
+.wikitable.sortable th.th-sort-desc::before {
+    opacity: 0.3;
+}
+
+.wikitable.sortable th.th-sort-asc::after {
+    opacity: 0.3;
 }
