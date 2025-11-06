@@ -1,3 +1,4 @@
+
 :root {
     --background-color: #f8f9fa;
     --card-background: #ffffff;
@@ -34,6 +35,68 @@ header {
     margin-bottom: 2rem;
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 1.5rem;
+}
+
+.header-logo {
+    display: block;
+    margin: 0 auto 1rem;
+    max-width: 250px;
+    height: auto;
+}
+
+.github-link {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.github-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #24292f;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.github-button:hover {
+    background-color: #40464f;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.github-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    filter: invert(1);
+}
+
+.submission-links {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.submission-links p {
+    margin: 0.5rem 0;
+    word-wrap: break-word;
+}
+
+.submission-links a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.submission-links a:hover {
+    text-decoration: underline;
+    color: var(--link-hover-color);
 }
 
 h1 {
@@ -146,26 +209,27 @@ h2 {
     cursor: pointer;
     position: relative;
     user-select: none;
+    padding-right: 30px;
 }
 
 .wikitable.sortable th::before,
 .wikitable.sortable th::after {
     content: '';
     position: absolute;
-    right: 10px;
+    right: 12px;
     opacity: 0.3;
-    border: 4px solid transparent;
+    border: 5px solid transparent;
 }
 
 .wikitable.sortable th::before {
     bottom: 50%;
-    margin-bottom: -1px;
+    margin-bottom: 2px;
     border-bottom-color: var(--heading-color);
 }
 
 .wikitable.sortable th::after {
     top: 50%;
-    margin-top: -1px;
+    margin-top: 2px;
     border-top-color: var(--heading-color);
 }
 
