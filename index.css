@@ -75,29 +75,55 @@ header {
 }
 
 .submission-links {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background-color: var(--background-color);
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
     text-align: center;
+    margin-bottom: 2rem;
 }
 
-.submission-links p {
-    margin: 0.5rem 0;
-    word-wrap: break-word;
+.submission-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
-.submission-links a {
-    color: var(--link-color);
+.submission-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    color: #ffffff;
     text-decoration: none;
-    font-weight: 500;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out;
 }
 
-.submission-links a:hover {
-    text-decoration: underline;
-    color: var(--link-hover-color);
+.submission-button:hover {
+    color: #ffffff;
+    text-decoration: none;
 }
+
+.submission-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.forms-button {
+    background-color: #7E57C2; /* Google Forms Purple */
+}
+
+.forms-button:hover {
+    background-color: #5E35B1;
+}
+
+.sheets-button {
+    background-color: #4CAF50; /* Google Sheets Green */
+}
+
+.sheets-button:hover {
+    background-color: #388E3C;
+}
+
 
 h1 {
     color: var(--heading-color);
@@ -121,73 +147,11 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
-.leaderboard {
-    margin-top: 2rem;
-}
-
-.table-wrapper {
-    overflow-x: auto;
-}
-
-.wikitable {
+.leaderboard-iframe {
     width: 100%;
-    border-collapse: collapse;
-    font-size: 0.95rem;
+    height: 900px;
+    border: none;
 }
-
-.wikitable th,
-.wikitable td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid var(--border-color);
-    white-space: nowrap;
-}
-
-.wikitable thead th {
-    background-color: var(--table-header-bg);
-    font-weight: 600;
-    color: var(--heading-color);
-}
-
-.wikitable tbody tr:hover {
-    background-color: var(--table-row-hover-bg);
-}
-
-.wikitable td:first-child,
-.wikitable th:first-child {
-    text-align: center;
-    width: 5%;
-}
-
-.wikitable td:nth-child(2),
-.wikitable th:nth-child(2) {
-    width: 45%;
-}
-
-.wikitable td.points,
-.wikitable th:nth-child(3),
-.wikitable th:nth-child(4) {
-    text-align: right;
-    font-feature-settings: "tnum"; /* Tabular nums for alignment */
-}
-
-.wikitable td a {
-    color: var(--link-color);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.2s ease-in-out;
-}
-
-.wikitable td a:hover {
-    color: var(--link-hover-color);
-    text-decoration: underline;
-}
-
-.wikitable td.points {
-    font-weight: 600;
-    color: var(--points-color);
-}
-
 
 @media (max-width: 768px) {
     .container {
@@ -202,46 +166,4 @@ h2 {
     h2 {
         font-size: 1.5rem;
     }
-}
-
-/* Styles for sortable tables */
-.wikitable.sortable th {
-    cursor: pointer;
-    position: relative;
-    user-select: none;
-    padding-right: 30px;
-}
-
-.wikitable.sortable th::before,
-.wikitable.sortable th::after {
-    content: '';
-    position: absolute;
-    right: 12px;
-    opacity: 0.3;
-    border: 5px solid transparent;
-}
-
-.wikitable.sortable th::before {
-    bottom: 50%;
-    margin-bottom: 2px;
-    border-bottom-color: var(--heading-color);
-}
-
-.wikitable.sortable th::after {
-    top: 50%;
-    margin-top: 2px;
-    border-top-color: var(--heading-color);
-}
-
-.wikitable.sortable th.th-sort-asc::before,
-.wikitable.sortable th.th-sort-desc::after {
-    opacity: 1;
-}
-
-.wikitable.sortable th.th-sort-desc::before {
-    opacity: 0.3;
-}
-
-.wikitable.sortable th.th-sort-asc::after {
-    opacity: 0.3;
 }
