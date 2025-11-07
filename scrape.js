@@ -2,6 +2,9 @@ const path = require("path");
 const fs = require("fs").promises;
 const puppeteer = require("puppeteer");
 
+// timeout increased to 30 sec for slow-loading Khan profiles.
+const ENERGY_POINTS_TIMEOUT = 30000;
+
 const LEADERBOARD_FILE = path.join(__dirname, "EP_Leaderboard.json");
 
 async function scrapeEnergyPoints(url) {
@@ -15,10 +18,9 @@ async function scrapeEnergyPoints(url) {
     await page.goto(url, { waitUntil: "networkidle2" });
 
     try {
-      // timeout increased to 30 sec for slow-loading Khan profiles.
-      await page.waitForSelector(".energy-points-badge", { timeout: 30000 });
+      await page.waitForSelector(".energy-points-badge", { timeout: ENERGY_POINTS_TIMEOUT });
     } catch {
-      console.log("Energy points badge not found after 10 seconds.");
+      console.log(`Energy points badge not found after ${ENERGY_POINTS_TIMEOUT / 1000} seconds.`);
       await page.screenshot({ path: path.join(__dirname, "debug.png") });
       console.log("Screenshot saved to debug.png");
       return null;
