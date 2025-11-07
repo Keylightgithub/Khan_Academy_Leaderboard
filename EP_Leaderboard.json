@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-07T04:54:05.501Z",
+  "generated_at": "2025-11-07T05:34:31.422Z",
   "source": "leaderboard_table.html",
   "entries": [
     {
@@ -16,23 +16,23 @@
       "profile_url": "https://www.khanacademy.org/profile/kaid_1105495127533973089607010",
       "points": 725200000,
       "pointsBehindRaw": "289.8M",
-      "pointsBehind": 289800000
+      "pointsBehind": 289826115
     },
     {
       "rank": 3,
       "name": "jeff lowe",
       "profile_url": "https://www.khanacademy.org/profile/kaid_170925914153633289273061",
       "points": 144980611,
-      "pointsBehindRaw": "884.1M",
-      "pointsBehind": 884100000
+      "pointsBehindRaw": "870.0M",
+      "pointsBehind": 870045504
     },
     {
       "rank": 4,
       "name": "Anthony Jacquez",
       "profile_url": "https://www.khanacademy.org/profile/kaid_299790810384799544141404",
       "points": 124000000,
-      "pointsBehindRaw": "891M",
-      "pointsBehind": 891000000
+      "pointsBehindRaw": "891.0M",
+      "pointsBehind": 891026115
     },
     {
       "rank": 5,
@@ -40,15 +40,15 @@
       "profile_url": "https://www.khanacademy.org/profile/kaid_526250758977379186358054",
       "points": 121226023,
       "pointsBehindRaw": "893.8M",
-      "pointsBehind": 893800000
+      "pointsBehind": 893800092
     },
     {
       "rank": 6,
       "name": "Deivison Takatu",
       "profile_url": "https://www.khanacademy.org/profile/kaid_816766937666022247190786",
       "points": 101400000,
-      "pointsBehindRaw": "913.4M",
-      "pointsBehind": 913400000
+      "pointsBehindRaw": "913.6M",
+      "pointsBehind": 913626115
     },
     {
       "rank": 7,
@@ -56,7 +56,7 @@
       "profile_url": "https://www.khanacademy.org/profile/kaid_777918107042041519200315",
       "points": 80400000,
       "pointsBehindRaw": "934.6M",
-      "pointsBehind": 934600000
+      "pointsBehind": 934626115
     },
     {
       "rank": 8,
@@ -64,47 +64,47 @@
       "profile_url": "https://www.khanacademy.org/profile/kaid_86660844801976661320106",
       "points": 74400000,
       "pointsBehindRaw": "940.6M",
-      "pointsBehind": 940600000
+      "pointsBehind": 940626115
     },
     {
       "rank": 9,
-      "name": "༺►─═NΔNDΔN═─◄༻",
-      "profile_url": "https://www.khanacademy.org/profile/kaid_1113866822345059356073719",
-      "points": 60166331,
-      "pointsBehindRaw": "955M",
-      "pointsBehind": 955000000
+      "name": "Light Runner",
+      "profile_url": "https://www.khanacademy.org/profile/kaid_486291797225131982323911",
+      "points": 61508627,
+      "pointsBehindRaw": "953.5M",
+      "pointsBehind": 953517488
     },
     {
       "rank": 10,
+      "name": "༺►─═NΔNDΔN═─◄༻",
+      "profile_url": "https://www.khanacademy.org/profile/kaid_1113866822345059356073719",
+      "points": 60166331,
+      "pointsBehindRaw": "954.9M",
+      "pointsBehind": 954859784
+    },
+    {
+      "rank": 11,
       "name": "John Henson",
       "profile_url": "https://www.khanacademy.org/profile/kaid_242606055627100227127051",
       "points": 59900000,
       "pointsBehindRaw": "955.1M",
-      "pointsBehind": 955100000
-    },
-    {
-      "rank": 11,
-      "name": "Light Runner",
-      "profile_url": "https://www.khanacademy.org/profile/kaid_486291797225131982323911",
-      "points": 61508627,
-      "pointsBehindRaw": "955.6M",
-      "pointsBehind": 955600000
+      "pointsBehind": 955126115
     },
     {
       "rank": 12,
       "name": "Keylight",
       "profile_url": "https://www.khanacademy.org/profile/JesusandKeylight",
-      "points": 59012635,
-      "pointsBehindRaw": "956.1M",
-      "pointsBehind": 956100000
+      "points": 59014350,
+      "pointsBehindRaw": "956.0M",
+      "pointsBehind": 956011765
     },
     {
       "rank": 13,
       "name": "Kevin W",
       "profile_url": "https://www.khanacademy.org/profile/kaid_879867115707245095326860",
       "points": 52603161,
-      "pointsBehindRaw": "962.5M",
-      "pointsBehind": 962500000
+      "pointsBehindRaw": "962.4M",
+      "pointsBehind": 962422954
     },
     {
       "rank": 14,
@@ -112,7 +112,7 @@
       "profile_url": "https://www.khanacademy.org/profile/kaid_722934026457814091695493",
       "points": 50631456,
       "pointsBehindRaw": "964.4M",
-      "pointsBehind": 964400000
+      "pointsBehind": 964394659
     },
     {
       "rank": 15,
@@ -120,7 +120,7 @@
       "profile_url": "https://www.khanacademy.org/profile/kaid_1194598185850430772994782",
       "points": 50600000,
       "pointsBehindRaw": "964.4M",
-      "pointsBehind": 964400000
+      "pointsBehind": 964426115
     },
     {
       "rank": 16,
@@ -128,7 +128,7 @@
       "profile_url": "https://www.khanacademy.org/profile/kaid_471885882115940739990162",
       "points": 50300000,
       "pointsBehindRaw": "964.7M",
-      "pointsBehind": 964700000
+      "pointsBehind": 964726115
     }
   ]
 }
