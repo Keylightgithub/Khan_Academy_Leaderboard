@@ -40,6 +40,17 @@ async function scrapeEnergyPoints(url) {
   }
 }
 
+// Helper to format points for display (e.g., 1234567 -> "1.2M")
+function formatPointsBehind(points) {
+    if (points >= 1000000) {
+        return (points / 1000000).toFixed(1) + 'M';
+    }
+    if (points >= 1000) {
+        return (points / 1000).toFixed(1) + 'K';
+    }
+    return points.toString();
+}
+
 async function updateLeaderboard() {
   let leaderboard;
   try {
@@ -64,6 +75,24 @@ async function updateLeaderboard() {
       console.log(`  Could not update points for ${entry.name}.`);
     }
   }
+
+  // Sort entries by points in descending order
+  leaderboard.entries.sort((a, b) => (b.points || 0) - (a.points || 0));
+
+  // Update rank and pointsBehind
+  const topScore = leaderboard.entries.length > 0 ? leaderboard.entries[0].points : 0;
+  leaderboard.entries.forEach((entry, index) => {
+    entry.rank = index + 1;
+    if (index === 0) {
+      entry.pointsBehind = null;
+      entry.pointsBehindRaw = "N/A";
+    } else {
+      const pointsBehind = topScore - entry.points;
+      entry.pointsBehind = pointsBehind;
+      entry.pointsBehindRaw = formatPointsBehind(pointsBehind);
+    }
+  });
+
 
   leaderboard.generated_at = new Date().toISOString();
   await fs.writeFile(LEADERBOARD_FILE, JSON.stringify(leaderboard, null, 2));

@@ -166,49 +166,6 @@ h2 {
     margin-top: 2rem;
 }
 
-.leaderboard-controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #f8f9fa;
-    border-radius: 6px;
-    border: 1px solid var(--border-color);
-}
-
-#refresh-leaderboard {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #fff;
-    background-color: var(--link-color);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-}
-
-#refresh-leaderboard:hover {
-    background-color: var(--link-hover-color);
-}
-
-#leaderboard-status {
-    font-size: 0.9rem;
-    color: #6c757d;
-    font-weight: 500;
-}
-
-#leaderboard-status.status-loading {
-    color: var(--link-color);
-}
-#leaderboard-status.status-success {
-    color: #28a745;
-}
-#leaderboard-status.status-error {
-    color: #dc3545;
-}
-
 .table-wrapper {
     overflow-x: auto;
     border: 1px solid var(--border-color);

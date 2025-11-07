@@ -28,8 +28,8 @@ function sortTableByColumn(table, column, asc = true) {
                 bVal = parseFloat(bColText.replace(/,/g, ''));
                 break;
             case 3: // Points Behind
-                aVal = aColText === 'N/A' ? 0 : parseFloat(aColText.replace(/M/g, '')) * 1000000;
-                bVal = bColText === 'N/A' ? 0 : parseFloat(bColText.replace(/M/g, '')) * 1000000;
+                aVal = aColText === 'N/A' ? 0 : parseFloat(aColText.replace(/,/g, ''));
+                bVal = bColText === 'N/A' ? 0 : parseFloat(bColText.replace(/,/g, ''));
                 break;
             case 1: // User (default text sort)
             default:
@@ -73,14 +73,6 @@ document.querySelectorAll(".wikitable.sortable th").forEach(headerCell => {
  */
 function formatNumberWithCommas(num) {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
-
-function setStatus(message, type = 'info') {
-    const statusEl = document.getElementById('leaderboard-status');
-    if (!statusEl) return;
-    statusEl.textContent = message || '';
-    statusEl.className = '';
-    if (type) statusEl.classList.add(`status-${type}`);
 }
 
 /**
@@ -131,7 +123,12 @@ function renderLeaderboardFromJson(data) {
         // Points Behind
         const tdBehind = document.createElement('td');
         tdBehind.className = 'points';
-        tdBehind.textContent = entry.pointsBehindRaw != null ? entry.pointsBehindRaw : (entry.pointsBehind != null ? formatNumberWithCommas(entry.pointsBehind) : '');
+        if (entry.pointsBehind != null) {
+            tdBehind.textContent = formatNumberWithCommas(entry.pointsBehind);
+        } else {
+            // This handles the "N/A" for the first rank.
+            tdBehind.textContent = entry.pointsBehindRaw != null ? entry.pointsBehindRaw : '';
+        }
         tr.appendChild(tdBehind);
 
         tBody.appendChild(tr);
@@ -149,7 +146,6 @@ function getLeaderboardJsonPath() {
 
 function fetchAndRender() {
     const jsonPath = getLeaderboardJsonPath();
-    setStatus('Loading...', 'loading');
     return fetch(jsonPath)
         .then(resp => {
             if (!resp.ok) throw new Error('Failed to load ' + jsonPath + ' (status: ' + resp.status + ')');
@@ -157,12 +153,9 @@ function fetchAndRender() {
         })
         .then(data => {
             renderLeaderboardFromJson(data);
-            setStatus('Loaded', 'success');
-            // re-enable sorting (headers already wired up on script execution)
             return data;
         })
         .catch(err => {
-            setStatus('Could not load leaderboard (see console)', 'error');
             // eslint-disable-next-line no-console
             console.warn('Could not load leaderboard JSON:', err);
             throw err;
@@ -170,13 +163,6 @@ function fetchAndRender() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const refreshBtn = document.getElementById('refresh-leaderboard');
-    if (refreshBtn) {
-        refreshBtn.addEventListener('click', () => {
-            fetchAndRender().catch(() => {});
-        });
-    }
-
     // Initial fetch
     fetchAndRender().catch(() => {});
 });
