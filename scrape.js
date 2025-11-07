@@ -15,7 +15,8 @@ async function scrapeEnergyPoints(url) {
     await page.goto(url, { waitUntil: "networkidle2" });
 
     try {
-      await page.waitForSelector(".energy-points-badge", { timeout: 10000 });
+      // timeout increased to 30 sec for slow-loading Khan profiles.
+      await page.waitForSelector(".energy-points-badge", { timeout: 30000 });
     } catch {
       console.log("Energy points badge not found after 10 seconds.");
       await page.screenshot({ path: path.join(__dirname, "debug.png") });
