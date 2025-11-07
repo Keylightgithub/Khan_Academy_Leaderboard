@@ -80,14 +80,14 @@ async function updateLeaderboard() {
   leaderboard.entries.sort((a, b) => (b.points || 0) - (a.points || 0));
 
   // Update rank and pointsBehind
-  const topScore = leaderboard.entries.length > 0 ? leaderboard.entries[0].points : 0;
   leaderboard.entries.forEach((entry, index) => {
     entry.rank = index + 1;
     if (index === 0) {
       entry.pointsBehind = null;
       entry.pointsBehindRaw = "N/A";
     } else {
-      const pointsBehind = topScore - entry.points;
+      const higherRankedEntry = leaderboard.entries[index - 1];
+      const pointsBehind = (higherRankedEntry.points || 0) - (entry.points || 0);
       entry.pointsBehind = pointsBehind;
       entry.pointsBehindRaw = formatPointsBehind(pointsBehind);
     }
