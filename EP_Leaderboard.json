@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-08T04:22:09.856Z",
+  "generated_at": "2025-11-08T04:44:42.964Z",
   "source": "leaderboard_table.html",
   "entries": [
     {
@@ -52,27 +52,27 @@
     },
     {
       "rank": 7,
-      "name": "Curiosity",
-      "profile_url": "https://www.khanacademy.org/profile/kaid_777918107042041519200315",
-      "points": 80400000,
-      "pointsBehindRaw": "21.0M",
-      "pointsBehind": 21000000
-    },
-    {
-      "rank": 8,
       "name": "Marvin Cohen",
       "profile_url": "https://www.khanacademy.org/profile/kaid_86660844801976661320106",
       "points": 91328475,
-      "pointsBehindRaw": "6.0M",
-      "pointsBehind": 6000000
+      "pointsBehindRaw": "10.1M",
+      "pointsBehind": 10071525
+    },
+    {
+      "rank": 8,
+      "name": "Curiosity",
+      "profile_url": "https://www.khanacademy.org/profile/kaid_777918107042041519200315",
+      "points": 80400000,
+      "pointsBehindRaw": "10.9M",
+      "pointsBehind": 10928475
     },
     {
       "rank": 9,
       "name": "Light Runner",
       "profile_url": "https://www.khanacademy.org/profile/kaid_486291797225131982323911",
       "points": 61508627,
-      "pointsBehindRaw": "12.9M",
-      "pointsBehind": 12891373
+      "pointsBehindRaw": "18.9M",
+      "pointsBehind": 18891373
     },
     {
       "rank": 10,
