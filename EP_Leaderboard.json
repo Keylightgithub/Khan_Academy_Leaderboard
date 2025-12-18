@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-12-18T13:38:05.059Z",
+  "generated_at": "2025-12-18T14:22:45.786Z",
   "source": "leaderboard_table.html",
   "entries": [
     {
@@ -54,9 +54,9 @@
       "rank": 7,
       "name": "Marvin Cohen",
       "profile_url": "https://www.khanacademy.org/profile/kaid_86660844801976661320106",
-      "points": 91354490,
+      "points": 91379550,
       "pointsBehindRaw": "10.0M",
-      "pointsBehind": 10045510
+      "pointsBehind": 10020450
     },
     {
       "rank": 8,
@@ -64,15 +64,15 @@
       "profile_url": "https://www.khanacademy.org/profile/kaid_777918107042041519200315",
       "points": 80400000,
       "pointsBehindRaw": "11.0M",
-      "pointsBehind": 10954490
+      "pointsBehind": 10979550
     },
     {
       "rank": 9,
       "name": "Keylight",
       "profile_url": "https://www.khanacademy.org/profile/JesusandKeylight",
-      "points": 65350310,
+      "points": 65357235,
       "pointsBehindRaw": "15.0M",
-      "pointsBehind": 15049690
+      "pointsBehind": 15042765
     },
     {
       "rank": 10,
@@ -80,7 +80,7 @@
       "profile_url": "https://www.khanacademy.org/profile/kaid_486291797225131982323911",
       "points": 61508627,
       "pointsBehindRaw": "3.8M",
-      "pointsBehind": 3841683
+      "pointsBehind": 3848608
     },
     {
       "rank": 11,
