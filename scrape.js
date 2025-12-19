@@ -1,3 +1,4 @@
+
 const path = require("path");
 const fs = require("fs").promises;
 const puppeteer = require("puppeteer");
@@ -65,38 +66,50 @@ async function updateLeaderboard() {
     }
   }
 
+  let pointsChanged = false;
+
   for (const entry of leaderboard.entries) {
     console.log(`Scraping ${entry.name}'s profile...`);
+    const oldPoints = entry.points;
     const points = await scrapeEnergyPoints(entry.profile_url);
+    
     if (points !== null) {
-      entry.points = points;
-      console.log(`  Updated points: ${points}`);
+      if (points !== oldPoints) {
+        entry.points = points;
+        pointsChanged = true;
+        console.log(`  Updated points: ${points} (was ${oldPoints})`);
+      } else {
+        console.log(`  Points unchanged for ${entry.name} (${points}).`);
+      }
     } else {
       console.log(`  Could not update points for ${entry.name}.`);
     }
   }
 
-  // Sort entries by points in descending order
-  leaderboard.entries.sort((a, b) => (b.points || 0) - (a.points || 0));
+  if (pointsChanged) {
+    // Sort entries by points in descending order
+    leaderboard.entries.sort((a, b) => (b.points || 0) - (a.points || 0));
 
-  // Update rank and pointsBehind
-  leaderboard.entries.forEach((entry, index) => {
-    entry.rank = index + 1;
-    if (index === 0) {
-      entry.pointsBehind = null;
-      entry.pointsBehindRaw = "N/A";
-    } else {
-      const higherRankedEntry = leaderboard.entries[index - 1];
-      const pointsBehind = (higherRankedEntry.points || 0) - (entry.points || 0);
-      entry.pointsBehind = pointsBehind;
-      entry.pointsBehindRaw = formatPointsBehind(pointsBehind);
-    }
-  });
+    // Update rank and pointsBehind
+    leaderboard.entries.forEach((entry, index) => {
+      entry.rank = index + 1;
+      if (index === 0) {
+        entry.pointsBehind = null;
+        entry.pointsBehindRaw = "N/A";
+      } else {
+        const higherRankedEntry = leaderboard.entries[index - 1];
+        const pointsBehind = (higherRankedEntry.points || 0) - (entry.points || 0);
+        entry.pointsBehind = pointsBehind;
+        entry.pointsBehindRaw = formatPointsBehind(pointsBehind);
+      }
+    });
 
-
-  leaderboard.generated_at = new Date().toISOString();
-  await fs.writeFile(LEADERBOARD_FILE, JSON.stringify(leaderboard, null, 2));
-  console.log("Leaderboard updated successfully!");
+    leaderboard.generated_at = new Date().toISOString();
+    await fs.writeFile(LEADERBOARD_FILE, JSON.stringify(leaderboard, null, 2));
+    console.log("Leaderboard updated and saved successfully!");
+  } else {
+    console.log("No point changes detected. Skipping file update to preserve original timestamp.");
+  }
 }
 
 updateLeaderboard();
