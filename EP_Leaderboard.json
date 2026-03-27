@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-27T15:52:01.578Z",
+  "generated_at": "2026-03-27T16:52:20.054Z",
   "source": "leaderboard_table.html",
   "entries": [
     {
@@ -70,9 +70,9 @@
       "rank": 9,
       "name": "Keylight",
       "profile_url": "https://www.khanacademy.org/profile/JesusandKeylight",
-      "points": 76491150,
+      "points": 76501235,
       "pointsBehindRaw": "3.9M",
-      "pointsBehind": 3908850
+      "pointsBehind": 3898765
     },
     {
       "rank": 10,
@@ -80,7 +80,7 @@
       "profile_url": "https://www.khanacademy.org/profile/kaid_486291797225131982323911",
       "points": 61508627,
       "pointsBehindRaw": "15.0M",
-      "pointsBehind": 14982523
+      "pointsBehind": 14992608
     },
     {
       "rank": 11,
