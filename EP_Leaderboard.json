@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-17T17:48:27.799Z",
+  "generated_at": "2026-04-17T18:57:01.288Z",
   "source": "leaderboard_table.html",
   "entries": [
     {
@@ -22,9 +22,9 @@
       "rank": 3,
       "name": "jeff lowe",
       "profile_url": "https://www.khanacademy.org/profile/kaid_170925914153633289273061",
-      "points": 144980611,
+      "points": 144981461,
       "pointsBehindRaw": "580.2M",
-      "pointsBehind": 580219389
+      "pointsBehind": 580218539
     },
     {
       "rank": 4,
@@ -32,7 +32,7 @@
       "profile_url": "https://www.khanacademy.org/profile/kaid_299790810384799544141404",
       "points": 124000000,
       "pointsBehindRaw": "21.0M",
-      "pointsBehind": 20980611
+      "pointsBehind": 20981461
     },
     {
       "rank": 5,
@@ -62,17 +62,17 @@
       "rank": 8,
       "name": "Keylight",
       "profile_url": "https://www.khanacademy.org/profile/JesusandKeylight",
-      "points": 81121670,
+      "points": 81132340,
       "pointsBehindRaw": "10.6M",
-      "pointsBehind": 10599330
+      "pointsBehind": 10588660
     },
     {
       "rank": 9,
       "name": "Curiosity",
       "profile_url": "https://www.khanacademy.org/profile/kaid_777918107042041519200315",
       "points": 80400000,
-      "pointsBehindRaw": "721.7K",
-      "pointsBehind": 721670
+      "pointsBehindRaw": "732.3K",
+      "pointsBehind": 732340
     },
     {
       "rank": 10,
